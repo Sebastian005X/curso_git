@@ -1,0 +1,2 @@
+# sirve para que git ignore ciertos archivos y no los guarda
+build/
