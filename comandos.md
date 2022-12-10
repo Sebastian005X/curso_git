@@ -20,3 +20,15 @@
 
 ** para mostrar de una forma mas detallada lo que has cambiado **
   git diff --staged
+
+** para eliminar archivos de mis commits **
+  git rm <'archivo'>
+
+** para mostrar los commits hechos y sus datos **
+  git log
+  git log --pretty=oneline "para mostrarlo en una sola linea"
+
+** para rehacer cambios de mi ultimo commit **
+  git commit --amend "Muestra un editor de codigo para modificar cosas"
+  git commit --amend <'valor'> "puedo cambiarle la descripción a mi ultimo commit"
+  git commit --amend --no-edit "Me permite añadir (que esten en el stage area) o eliminar archivos en mi ultimo commit"
