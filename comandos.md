@@ -32,3 +32,11 @@
   git commit --amend "Muestra un editor de codigo para modificar cosas"
   git commit --amend <'valor'> "puedo cambiarle la descripción a mi ultimo commit"
   git commit --amend --no-edit "Me permite añadir (que esten en el stage area) o eliminar archivos en mi ultimo commit"
+
+** para quitar archivos del stage area **
+  git reset HEAD <'archivo'>
+  git restore --staged <'archivo'>
+
+** para descartar cambios de un archivo **
+  git checkout -- <'archivo'>
+  git restore <'archivo'>
