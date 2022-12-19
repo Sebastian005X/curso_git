@@ -40,3 +40,37 @@
 ** para descartar cambios de un archivo **
   git checkout -- <'archivo'>
   git restore <'archivo'>
+
+** clonar repositorio remoto **
+  git clone <"url">
+
+** para mostrar los nombres cortos de mis repositorios remotos **
+  git remote
+  git remote -v "Me muestra el nombre corto y la url del repositorio remoto"
+
+** añadir un nuevo repositorio remoto explicito **
+  git remote add <"nombre corto"> <"Url">
+
+** para obtener cambios de un repositorio remoto, pero sin aplicarlos **
+  git fetch <"remote">
+  git fetch <"remote"> <"branch"> "recupera la rama especifica"
+  git fetch --all "recupera todos los reposito"rios remotos y sus ramas"
+  git fetch --fry-run 
+  "ejecutará una demo del comando. Genera ejemplos de acciones que realizará   durante la  recuperación, pero no los aplica."
+
+** para obtener cambios y fusionarlos localmente **
+  git pull
+  git pull <"remote"> para obtener cambios de un repositorio especifico
+
+** para mandar cambios (comits) a el repositorio remoto **
+  git push <"remote"> <"branch">
+
+** para ver información sobre un repositorio remoto **
+  git remote show <"remote">
+
+** renombrar remoto **
+  git remote rename <"nombre antiguo"> <"nuevo nombre">
+
+** remover remoto **
+  git remote remove <"remoto">
+
