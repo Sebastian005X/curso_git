@@ -62,7 +62,7 @@
   git pull
   git pull <"remote"> para obtener cambios de un repositorio especifico
 
-** para mandar cambios (comits) a el repositorio remoto **
+** para mandar cambios (commits) a el repositorio remoto **
   git push <"remote"> <"branch">
 
 ** para ver información sobre un repositorio remoto **
@@ -74,3 +74,50 @@
 ** remover remoto **
   git remote remove <"remoto">
 
+** Etiquetando **
+"
+  Las etiquetas son referencias que apuntan a puntos concretos en el historial de git, una etiqueta
+  es como una rama que no cambia, pero que al momento de crearse ya no tiene mas confirmaciones. Son
+  utilizadas para una publicación de versión marcada. Ejemplo: v1.0.1.
+
+  En git exiten dos tipos de etiquetas: anotadas y ligeras. Las dos difieren en la cantidad de 
+  metadatos adjuntos que almacenan. Una practica recomendada es cosiderar a las etiquetas anotadas
+  como publicas y las etiquetas ligeras como privadas. El nombre de la persona, su correo y fecha
+  son datos importantes para una publicación publica. Las etiquetas ligeras son básicamente 
+  marcadores de una confirmación; son solo un nombre y un puntero a una confirmación, útiles para crear enlaces rapidos a las confirmaciónes relevantes.
+"
+
+** crear etiqueta anotada **
+  git tag -a <"tagName"> "abre un editor para pedir que se introduzcan metadatos"
+  git tag -a <"tagName"> -m "mensaje" "ya no abre el editor."
+
+** crear una etiqueta ligera **
+  git tag <"tagName">
+
+** listar etiquetas **
+  git tag
+
+** listar una serie de etiquetas en particular **
+  git tag -l <"expresión">
+
+** para etiquetar commits antiguos **
+  git tag -a <"tagName"> <"referencia al hash sha del commit"> "para ver el hash sha puede ejecutar
+  el siguiente comando: git log --pretty=oneline"
+
+  git tag <"tagName"> <"referencia al hash sha del commit"> "lo mismo con una etiqueta ligera"
+
+** para reetiquetar una etiqueta **
+  git tag -a -f <"nameTag"> <"referencia al hash sha del commit">
+
+** para revisar el estado de el repositorio con una etiqueta **
+  git checkout <"nameTag"> "Esto creara una rama nueva desasociada, que no modificara el estado del
+  repositorio"
+
+** para pushear etiquetas a el remoto **
+  git push <"remoto"> <"nameTag">
+  git push <"remoto"> --tags "para hacerlo con todas"
+
+** eliminar etiquetas **
+  git tag -d <"nameTag">
+  git push <"remoto"> --delete <"tagname"> "eliminar etiquetas remotas"
+  
