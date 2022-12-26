@@ -120,4 +120,12 @@
 ** eliminar etiquetas **
   git tag -d <"nameTag">
   git push <"remoto"> --delete <"tagname"> "eliminar etiquetas remotas"
+
+** git branching **
+
+* para crear una nueva rama **
+  git branch <"nombre de la rama">
+
+** para cambiar a una rama existente **
+  git checkout <"nombre de la rama">
   
