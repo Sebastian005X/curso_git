@@ -123,9 +123,18 @@
 
 ** git branching **
 
-* para crear una nueva rama **
+** para crear una nueva rama **
   git branch <"nombre de la rama">
 
 ** para cambiar a una rama existente **
   git checkout <"nombre de la rama">
-  
+
+** para crear y cambiar a una rama al mismo tiempo **
+  git checkout -b <"nombre de la rama">
+
+** fusionar una rama con el HEAD actual **
+  git merge <"nombre de la rama">
+
+** eliminar rama **
+  git branch -d <"nombre de la rama">
+  git push -d <"nombre remoto"> <"nombre de la rama"> 
